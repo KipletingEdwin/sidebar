@@ -5,15 +5,15 @@ import { SidebarData } from './SidebarData';
 function Sidebar() {
   return (
     <div className='Sidebar'>
-      <ul> 
+      <ul className='SidebarList'> 
       {
         SidebarData.map((val, id)=>{
           return(
-            <li key={id} onClick={window.location.pathname = val.link}>
-              <div>
+            <li key={id}  className='row'>
+              <div id='icon'>
                 {val.icon}
               </div>
-              <div>
+              <div id='title'>
                 {val.title}
               </div>
             </li>
